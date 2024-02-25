@@ -1,0 +1,16 @@
+<h1>Home#index</h1>
+<%= form_with model: @look, local: true do |form| %>
+  <%= form.text_area :description %>
+  <%= form.file_field :photos, multiple: true %>
+  <%= form.submit %>
+<% end %>
+
+<% @looks.each do |look| %>
+  <div>
+    <p><%= look.description %></p>
+    <% look.photos.each do |photo| %>
+      <%= image_tag photo.url %>
+    <% end %>
+  </div>
+<% end %>
+
