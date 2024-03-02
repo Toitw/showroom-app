@@ -1,8 +1,4 @@
-<turbo-stream action="append" target="looks">
-  <template>
-    <%= render partial: 'looks/look', locals: { look: @look } %>
-  </template>
-</turbo-stream>
+<%= turbo_stream.append 'looks', @look %>
 
 <turbo-stream action="replace" target="new_look_form">
   <template>
