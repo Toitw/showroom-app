@@ -19,8 +19,15 @@ class LooksController < ApplicationController
         if @look.save
             redirect_to @look
         else
-            render :new
+            @looks = Look.all
+            render :index
         end
+    end
+
+    def destroy
+        @look = Look.find(params[:id])
+        @look.destroy
+        redirect_to looks_path
     end
 
     private
