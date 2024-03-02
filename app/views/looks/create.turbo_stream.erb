@@ -1,0 +1,11 @@
+<turbo-stream action="append" target="looks">
+  <template>
+    <%= render partial: 'looks/look', locals: { look: @look } %>
+  </template>
+</turbo-stream>
+
+<turbo-stream action="replace" target="new_look_form">
+  <template>
+    <%= render 'form', look: Look.new %>
+  </template>
+</turbo-stream>

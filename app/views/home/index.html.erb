@@ -1,37 +1,3 @@
-<h1>Home#index</h1>
-<!-- Button trigger modal -->
-<button id="add-look-open-modal-button">Add Look</button>
+<h1>home#index</h1>
 
-<!-- Modal -->
-<div id="add-look-modal" style="display: none;">
-  <div id="add-look-modal-content">
-    <h5>Add Look</h5>
-    <%= form_with model: @look, url: looks_path, local: true do |form| %>
-      <% if @look.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@look.errors.count, "error") %> prohibited this look from being saved:</h2>
-
-          <ul>
-          <% @look.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <%= form.text_area :description %>
-      <%= form.file_field :photos, multiple: true, name: 'look[photos][]' %>
-      <%= form.submit %>
-   <% end %>
-    <button id="add-look-close-modal-button">Close</button>
-  </div>
-</div>
-
-<% @looks.each do |look| %>
-  <div>
-    <p><%= look.description %></p>
-    <% look.photos.each do |photo| %>
-      <%= image_tag(photo, size: '100x100') %>
-    <% end %>
-    <%= button_to 'Delete', look, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-<% end %>
+<%= link_to "Looks Index", looks_path %>
