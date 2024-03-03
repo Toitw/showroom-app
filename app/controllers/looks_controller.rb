@@ -7,7 +7,8 @@ class LooksController < ApplicationController
     end
 
     def new
-        @look = Look.new
+        @user = current_user
+        @look = @user.looks.new
     end
 
     def show
@@ -24,7 +25,7 @@ class LooksController < ApplicationController
             else
                 @looks = Look.all
                 format.html { render :index, status: :unprocessable_entity }
-                format.turbo_stream { render :new, status: :unprocessable_entity } 
+                format.turbo_stream { render :index, status: :unprocessable_entity } 
             end
         end
     end

@@ -1,7 +1,1 @@
 <%= turbo_stream.append 'looks', @look %>
-
-<turbo-stream action="replace" target="new_look_form">
-  <template>
-    <%= render 'form', look: Look.new %>
-  </template>
-</turbo-stream>
