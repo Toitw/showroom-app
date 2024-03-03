@@ -12,5 +12,5 @@
   <%= form.text_area :description, required: true %>
   <%= form.file_field :photos, multiple: true, required: true, name: 'look[photos][]' %>
   <%= form.submit %>
-  <button data-controller="look" data-action="click->look#hideForm">Cancel</button>
+  <button data-controller="look" data-action="click->look#hideForm">Close</button>
 <% end %>
