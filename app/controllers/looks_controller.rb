@@ -18,14 +18,13 @@ class LooksController < ApplicationController
     def create
         @user = current_user
         @look = @user.looks.new(look_params)
+        @looks = Look.all
         respond_to do |format|
             if @look.save
-                format.turbo_stream
                 format.html { redirect_to looks_path }
+                format.turbo_stream
             else
-                @looks = Look.all
-                format.html { render :index, status: :unprocessable_entity }
-                format.turbo_stream { render :index, status: :unprocessable_entity } 
+                format.html { render :new }
             end
         end
     end

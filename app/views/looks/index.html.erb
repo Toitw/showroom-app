@@ -1,22 +1,7 @@
 <h1>Look#index</h1>
 
-<button data-controller="look" data-action="click->look#showForm">Add Look</button>
+<%= turbo_frame_tag "new look" do %>
+  <%= link_to 'New look', new_look_path(@look) %>
+<% end %>
 
-
-<!-- Form Modal (Initially Hidden) -->
-<turbo-frame id="new_look" style="display: none;">
-  <%= render 'form', look: Look.new %>
-</turbo-frame>
-
-<!-- Looks List -->
-<turbo-frame id="looks">
-  <% @looks.each do |look| %>
-    <div>
-      <p><%= look.description %></p>
-      <% look.photos.each do |photo| %>
-        <%= image_tag(photo, size: '100x100') %>
-      <% end %>
-      <%= button_to 'Delete', look, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  <% end %>
-</turbo-frame>
+<%= render 'look' %>

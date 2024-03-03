@@ -1,16 +1,26 @@
-<%= form_with model: look, id: "new_look_form", local: false do |form| %>
-  <% if look.errors.any? %>
+<%= form_with model: @look, data: {controller: "look", action: "turbo:submit-end->look#reset"}, id: "new_look_form" do |form| %>
+  <% if @look.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(look.errors.count, "error") %> prohibited this look from being saved:</h2>
+      <h2><%= pluralize(@look.errors.count, "error") %> prohibited this look from being saved:</h2>
       <ul>
-        <% look.errors.full_messages.each do |message| %>
+        <% @look.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  <%= form.text_area :description, required: true %>
-  <%= form.file_field :photos, multiple: true, required: true, name: 'look[photos][]' %>
-  <%= form.submit %>
-  <button data-controller="look" data-action="click->look#hideForm">Close</button>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, required: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photos, multiple: true, required: true, name: 'look[photos][]' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>
