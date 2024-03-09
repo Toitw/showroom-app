@@ -44,8 +44,7 @@ class LooksController < ApplicationController
         @look = Look.find(params[:id])
         respond_to do |format|
             if @look.update(look_params)
-                format.turbo_stream
-                
+                format.html { redirect_to looks_path }
             else
                 render :edit
             end
