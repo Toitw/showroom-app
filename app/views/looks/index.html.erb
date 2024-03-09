@@ -4,4 +4,8 @@
   <%= link_to 'New look', new_look_path(@look) %>
 <% end %>
 
-<%= render 'look' %>
+<div id="looks">
+  <% @looks.each do |look| %>
+    <%= render 'look', look: look %>
+  <% end %>
+</div>

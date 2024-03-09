@@ -36,6 +36,22 @@ class LooksController < ApplicationController
         redirect_to looks_path
     end
 
+    def edit
+        @look = Look.find(params[:id])
+    end
+
+    def update
+        @look = Look.find(params[:id])
+        respond_to do |format|
+            if @look.update(look_params)
+                format.turbo_stream
+                
+            else
+                render :edit
+            end
+        end
+    end
+
     private
 
     def look_params

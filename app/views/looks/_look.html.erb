@@ -1,11 +1,9 @@
-<div id="looks">
-    <% @looks.each do |look| %>
-        <div>
-            <p><%= look.description %></p>
-            <% look.photos.each do |photo| %>
-                <%= image_tag(photo, size: '100x100') %>
-            <% end %>
-            <%= button_to 'Delete', look_path(look), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-    <% end %>
+<!-- This is now _look.html.erb, adjusted to display a single look -->
+<div id="look_<%= look.id %>">
+  <p><%= look.description %></p>
+  <% look.photos.each do |photo| %>
+    <%= image_tag(photo, size: '100x100') %>
+  <% end %>
+  <%= button_to 'Delete', look_path(look), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit look', edit_look_path(look) %>
 </div>
