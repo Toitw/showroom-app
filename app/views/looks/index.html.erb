@@ -7,6 +7,5 @@
 <div id="looks">
   <% @looks.each do |look| %>
     <%= render 'look', look: look %>
-    <%= link_to 'Edit look', edit_look_path(look) %>
   <% end %>
 </div>
