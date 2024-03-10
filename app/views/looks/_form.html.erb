@@ -17,7 +17,11 @@
 
   <div class="field">
     <%= form.label :photo %>
-    <%= form.file_field :photos, multiple: true, required: true, name: 'look[photos][]' %>
+    <%# <%= form.file_field :photos, multiple: true, required: true, name: 'look[photos][]' %>
+        <% @look.photos.each do |photo| %>
+          <%= image_tag(url_for(photo), size: '100x100') %>
+        <% end %>
+    <%= form.file_field :photos, multiple: true, requiered: true, name: 'look[photos][]' %>
   </div>
 
   <div class="actions">

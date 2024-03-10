@@ -42,6 +42,9 @@ class LooksController < ApplicationController
 
     def update
         @look = Look.find(params[:id])
+        if params[:look][:photos] == [""]
+            params[:look].delete(:photos)
+        end
         respond_to do |format|
             if @look.update(look_params)
                 format.html { redirect_to looks_path }
