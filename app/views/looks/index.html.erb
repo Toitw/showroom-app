@@ -1,19 +1,26 @@
-<h1>Looks</h1>
-
-<%= form_tag looks_path, method: :get do %>
-  <%= label_tag :category_names, "Filter by Categories" %>
-  <%= text_field_tag :category_names, params[:category_names], placeholder: "Enter categories separated by commas" %>
-  <%= submit_tag "Filter" %>
-  <%= link_to "Clear Filter", looks_path, class: "clear-filter" %>
-<% end %>
-
-<%= turbo_frame_tag "new look" do %>
-  <%= link_to 'New look', new_look_path(@look) %>
-<% end %>
-
-<div id="looks">
-  <% @looks.each do |look| %>
-    <%= render 'look', look: look %>
-  <% end %>
+<div class="container">
+  <main>
+    <title>
+      <h1>Looks</h1>
+    </title>
+    <div class='filter'>
+      <%= form_tag looks_path, method: :get do %>
+        <%= label_tag :category_names, "Filter by Categories" %>
+        <%= text_field_tag :category_names, params[:category_names], placeholder: "Enter categories separated by commas" %>
+        <%= submit_tag "Filter" %>
+        <%= link_to "Clear Filter", looks_path, class: "clear-filter" %>
+      <% end %>
+    </div>
+    <div>
+      <%= turbo_frame_tag "new look" do %>
+        <%= link_to 'New look', new_look_path(@look) %>
+      <% end %>
+    </div>
+    <div id="looks">
+      <% @looks.each do |look| %>
+        <%= render 'look', look: look %>
+      <% end %>
+    </div>
+  </main>
+  <%= render 'layouts/nav' %>
 </div>
-<%= render 'layouts/nav' %>
