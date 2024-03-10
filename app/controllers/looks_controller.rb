@@ -57,7 +57,7 @@ class LooksController < ApplicationController
     private
 
     def look_params
-        params.require(:look).permit(:description, photos: [], category_names: [])
+        params.require(:look).permit(:description, :category_names, photos: [])
     end
 
 
