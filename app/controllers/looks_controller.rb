@@ -46,7 +46,7 @@ class LooksController < ApplicationController
             params[:look].delete(:photos)
         end
         respond_to do |format|
-            if @look.update(look_params)
+            if @look.update!(look_params)
                 format.html { redirect_to looks_path }
             else
                 render :edit
