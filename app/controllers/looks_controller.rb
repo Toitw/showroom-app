@@ -36,6 +36,24 @@ class LooksController < ApplicationController
         redirect_to looks_path
     end
 
+    def edit
+        @look = Look.find(params[:id])
+    end
+
+    def update
+        @look = Look.find(params[:id])
+        if params[:look][:photos] == [""]
+            params[:look].delete(:photos)
+        end
+        respond_to do |format|
+            if @look.update!(look_params)
+                format.html { redirect_to looks_path }
+            else
+                render :edit
+            end
+        end
+    end
+
     private
 
     def look_params
