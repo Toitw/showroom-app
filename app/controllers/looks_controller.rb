@@ -3,9 +3,14 @@ class LooksController < ApplicationController
     
     def index
         @user = current_user
-        @looks = Look.all
+        @categories = Category.all
+        if params[:category_names].present?
+          @looks = Look.joins(:categories).where(categories: { name: params[:category_names].split(',').map(&:strip) }).distinct
+        else
+          @looks = Look.all
+        end
     end
-
+      
     def new
         @user = current_user
         @look = @user.looks.new

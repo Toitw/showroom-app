@@ -1,0 +1,29 @@
+<!-- component -->
+<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+    <div class="grid h-full max-w-lg grid-cols-3 mx-auto font-medium">
+        <%= link_to looks_path, class: "inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group" do %>
+            <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C9.243 2 7 4.243 7 7v4H4a1 1 0 00-1 1v9a1 1 0 001 1h16a1 1 0 001-1v-9a1 1 0 00-1-1h-3V7c0-2.757-2.243-5-5-5zm1 11h-2v-2h2v2zm-2-4V7c0-1.654 1.346-3 3-3s3 1.346 3 3v2H11zm-5 6h14v7H6v-7z"></path>
+            </svg>
+            <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">Looks</span>
+        <% end %>
+        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+            <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M6 1a1 1 0 00-1 1v1H4a2 2 0 00-2 2v11a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2h-1V2a1 1 0 10-2 0v1H7V2a1 1 0 00-1-1zm0 5a1 1 0 011 1v1a1 1 0 01-2 0V7a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 01-2 0V7a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 01-2 0V7a1 1 0 011-1z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">Calendar</span>
+        </button>
+        <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
+            <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 4a4 4 0 100 8 4 4 0 000-8zm0 7a3 3 0 100-6 3 3 0 000 6zm-7 7a7 7 0 1114 0H3z"></path>
+            </svg>
+            <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">Profile</span>
+        </button>
+    </div>
+</div>
+
+<%# <div class="fixed inset-x-0 bottom-0 bg-gray-800 text-white py-2 text-center shadow-md z-10">
+    <%= link_to 'Looks', looks_path, class: "nav-link" %>
+    <%# <%= link_to 'Calendar', "#", class: "nav-link" %> 
+    <%# <%= link_to 'Profile', "#", class: "nav-link" %>
+<%# </div> %>
