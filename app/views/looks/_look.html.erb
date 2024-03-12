@@ -4,6 +4,9 @@
   <% look.photos.each do |photo| %>
     <%= image_tag(photo, size: '100x100') %>
   <% end %>
+  <% look.categories.each do |category| %>
+    <%= category.name %>
+  <% end %>
   <%= button_to 'Delete', look_path(look), method: :delete, data: { confirm: 'Are you sure?' } %>
   <%= link_to 'Edit look', edit_look_path(look) %>
 </div>
