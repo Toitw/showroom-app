@@ -1,3 +1,15 @@
+.look-card {
+    max-width: 40rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    margin: 2em auto;
+}
+  
+.look-card img {
+width: 100%;
+height: auto;
+}
+
 .actions {
     display:flex;
     justify-content: space-evenly;
@@ -14,8 +26,8 @@ display: inline-block;
 border-radius: 3px;
 padding: .2em .5em .3em;
 border-radius: 2px;
-background: rgb(224, 219, 219);
-color: black;
+color: #fff;
+background: #6675e0;
 font-weight: 600;
 margin: .25em .1em;
 }
@@ -28,69 +40,69 @@ margin: .25em .1em;
     background-color: #f9f9f9;
 }
 
-  .actions a.edit, .actions button.delete {
-    appearance: none;
-    border: 1px solid; /* Define border for both */
-    border-radius: 6px;
-    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
-    box-sizing: border-box;
-    color: #fff; /* Initial color, will be overridden for .edit */
-    cursor: pointer;
-    display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    padding: 6px 16px;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-  
-  
-  .actions a.edit {
-    background-color: #fff; 
-    color: #000; 
-    border-color: #000; 
-  }
-  
-  .actions a.edit:hover {
-    background-color: #f0f0f0; 
-  }
-  
+.actions a.edit, .actions button.delete {
+appearance: none;
+border: 1px solid; /* Define border for both */
+border-radius: 6px;
+box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+box-sizing: border-box;
+color: #fff; /* Initial color, will be overridden for .edit */
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+padding: 6px 16px;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+vertical-align: middle;
+white-space: nowrap;
+}
 
-  .actions button.delete {
-    background-color: #d9534f; 
-    border-color: #d43f3a; 
-  }
-  
-  .actions button.delete:hover {
-    background-color: #c9302c; /* Darker red on hover */
-  }
-  
-  .actions button:focus:not(:focus-visible):not(.focus-visible) {
-    box-shadow: none;
-    outline: none;
-  }
-  
-  .actions button:focus {
-    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
-    outline: none;
-  }
-  
-  .actions button:disabled {
-    background-color: #94d3a2;
-    border-color: rgba(27, 31, 35, .1);
-    color: rgba(255, 255, 255, .8);
-    cursor: default;
-  }
-  
-  .actions button:active {
-    background-color: #298e46;
-    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
-  }
+
+.actions a.edit {
+background-color: #fff; 
+color: #000; 
+border-color: #000; 
+}
+
+.actions a.edit:hover {
+background-color: #f0f0f0; 
+}
+
+
+.actions button.delete {
+background-color: #d9534f; 
+border-color: #d43f3a; 
+}
+
+.actions button.delete:hover {
+background-color: #c9302c; /* Darker red on hover */
+}
+
+.actions button:focus:not(:focus-visible):not(.focus-visible) {
+box-shadow: none;
+outline: none;
+}
+
+.actions button:focus {
+box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+outline: none;
+}
+
+.actions button:disabled {
+background-color: #94d3a2;
+border-color: rgba(27, 31, 35, .1);
+color: rgba(255, 255, 255, .8);
+cursor: default;
+}
+
+.actions button:active {
+background-color: #298e46;
+box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
   
