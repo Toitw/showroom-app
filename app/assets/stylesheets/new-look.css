@@ -1,0 +1,120 @@
+.new-look-form-container {
+    margin: 1rem auto; 
+}
+
+#new-look-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.field input[type="text"],
+.field textarea,
+.field select,
+.file-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.field textarea {
+    height: 100px;
+}
+
+#error-explanation {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#error-explanation h2 {
+    margin-top: 0;
+}
+
+#error-explanation ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#error-explanation ul li {
+    margin-left: 20px;
+}
+
+.file-field {
+    border: 1px solid #ccc;
+    display: block;
+    padding: 6px;
+}
+
+.actions input[type="submit"] {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.actions input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.field p {
+    font-size: 0.875em;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.close-btn {
+    font-size: 1rem; 
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #000; 
+    text-align: end;
+}
+
+.main-btn {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.main-btn#new-look-btn {
+    background-color: #0825c5;
+}
+
+.main-btn#new-look-btn:hover {
+    background-color: #0a2fde;
+}
+
+.main-btn#new-look-btn:active {
+    background-color: #0a2fde;
+}
+
+.new-look {
+    margin: 2rem auto;
+}

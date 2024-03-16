@@ -1,6 +1,6 @@
-<%= form_with model: @look, data: {controller: "look", action: "turbo:submit-end->look#reset"}, id: "new_look_form" do |form| %>
+<%= form_with model: @look, id: "new-look-form", data: {controller: "look", action: "turbo:submit-end->look#reset"} do |form| %>
   <% if @look.errors.any? %>
-    <div id="error_explanation">
+    <div id="error-explanation">
       <h2><%= pluralize(@look.errors.count, "error") %> prohibited this look from being saved:</h2>
       <ul>
         <% @look.errors.full_messages.each do |message| %>
@@ -9,7 +9,9 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="close-btn">
+    <%= link_to 'X', looks_path %>
+  </div>
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description, required: true %>
@@ -21,7 +23,7 @@
         <% @look.photos.each do |photo| %>
           <%= image_tag(url_for(photo), size: '100x100') %>
         <% end %>
-    <%= form.file_field :photos, multiple: true, requiered: true, name: 'look[photos][]' %>
+    <%= form.file_field :photos, class: 'file-field', multiple: true, required: true, name: 'look[photos][]' %>
   </div>
 
   <div class="field">
