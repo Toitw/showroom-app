@@ -11,9 +11,9 @@
         <%= link_to "Clear Filter", looks_path, class: "clear-filter" %>
       <% end %>
     </div>
-    <div>
+    <div class="new-look-form-container">
       <%= turbo_frame_tag "new-look" do %>
-        <%= link_to 'New Look', new_look_path(@look) %>
+        <%= link_to 'New Look', new_look_path(@look), class: 'main-btn', id: 'new-look-btn' %>
       <% end %>
     </div>
     <div id="looks">
