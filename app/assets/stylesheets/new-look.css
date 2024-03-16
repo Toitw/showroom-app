@@ -79,4 +79,13 @@
     color: #666;
     margin-top: 0.5rem;
   }
+
+  .close-btn {
+    font-size: 1rem; 
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #000; 
+    text-align: end;
+  }
   

@@ -9,7 +9,9 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="close-btn">
+    <%= link_to 'X', looks_path %>
+  </div>
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description, required: true %>
